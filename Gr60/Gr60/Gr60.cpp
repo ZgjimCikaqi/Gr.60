@@ -34,7 +34,28 @@ int main() {
         return 0;
     }
 
-    cout << "Keni zgjedhur telefon te brendit " << brand << ".\n";
+    int maxAdd = 25 - *stock;
+
+    cout << "Keni zgjedhur telefon te brendit " << brand
+        << ", ku mund te shtoni edhe " << maxAdd << " telefona tjere.\n";
+
+    if (maxAdd > 0) {
+        int add;
+        cout << "Shenoni sasine e telefonave qe deshironi te shtoni ne stok? ";
+        cin >> add;
+
+        if (add >= 0 && add <= maxAdd) {
+            *stock += add;
+        }
+        else {
+            cout << "Sasi e pavlefshme.\n";
+        }
+    }
+
+    cout << "\nStoku aktual:\n";
+    cout << "Apple: " << apple << endl;
+    cout << "Samsung: " << samsung << endl;
+    cout << "Huawei: " << huawei << endl;
 
     return 0;
 }
