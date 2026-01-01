@@ -4,11 +4,13 @@
 using namespace std;
 
 int main() {
+
     int apple = 1;
     int samsung = 1;
     int huawei = 2;
 
     char choice;
+
 
     cout << "Zgjidhni nje nga brendet e listuara A - Apple, S - Samsung, H - Huawei? ";
     cin >> choice;
@@ -51,7 +53,6 @@ int main() {
             cout << "Sasi e pavlefshme.\n";
         }
     }
-
     cout << "\nStoku aktual:\n";
     cout << "Apple: " << apple << endl;
     cout << "Samsung: " << samsung << endl;
