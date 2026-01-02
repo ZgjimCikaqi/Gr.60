@@ -52,3 +52,27 @@ Ky projekt shërben si shembull praktik për:
 ### Ekzekutimi i Programit
 ![Screenshot i ekzekutimit](https://github.com/user-attachments/assets/1f8dab74-2606-4cc2-812d-ad722b1b3a4e)
 
+### Përdorimi i Aplikacionit
+
+Pas nisjes së programit, përdoruesi do të udhëzohet hap pas hapi në console.
+
+- Programi kërkon zgjedhjen e një brendi telefoni:
+  - `A` – Apple  
+  - `S` – Samsung  
+  - `H` – Huawei  
+
+- Më pas, programi tregon sa telefona mund të shtohen për brendin e zgjedhur.
+
+- Përdoruesi shkruan numrin e telefonave që dëshiron të shtojë në stok.
+
+- Numrat negativë ose vlerat që tejkalojnë kufirin e lejuar nuk pranohen.
+
+- Programi përditëson automatikisht stokun për brendin përkatës.
+
+Në fund të ekzekutimit, shfaqet gjendja përfundimtare e stokut:
+- Stoku final i **Apple**
+- Stoku final i **Samsung**
+- Stoku final i **Huawei**
+
+Pas shfaqjes së rezultateve, aplikacioni përfundon ekzekutimin.
+
