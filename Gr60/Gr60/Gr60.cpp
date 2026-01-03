@@ -57,6 +57,6 @@ int main() {
     cout << "Apple: " << apple << endl;
     cout << "Samsung: " << samsung << endl;
     cout << "Huawei: " << huawei << endl;
-
+ 
     return 0;
 }
