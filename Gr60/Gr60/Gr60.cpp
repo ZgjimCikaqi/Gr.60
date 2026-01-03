@@ -1,34 +1,34 @@
 #include <iostream>
 #include <cctype>
+#include <string>
 
 using namespace std;
 
 int main() {
 
-    int apple = 1;
-    int samsung = 1;
-    int huawei = 2;
+    int appleQty = 1;
+    int samsungQty = 1;
+    int huaweiQty = 2;
 
     char choice;
-
-
     cout << "Zgjidhni nje nga brendet e listuara A - Apple, S - Samsung, H - Huawei? ";
     cin >> choice;
+
     choice = toupper(choice);
 
-    int* stock = nullptr;
+    int* stockPtr = nullptr;
     string brand;
 
     if (choice == 'A') {
-        stock = &apple;
+        stockPtr = &appleQty;
         brand = "Apple";
     }
     else if (choice == 'S') {
-        stock = &samsung;
+        stockPtr = &samsungQty;
         brand = "Samsung";
     }
     else if (choice == 'H') {
-        stock = &huawei;
+        stockPtr = &huaweiQty;
         brand = "Huawei";
     }
     else {
@@ -36,10 +36,10 @@ int main() {
         return 0;
     }
 
-    int maxAdd = 25 - *stock;
+    int maxAdd = 25 - *stockPtr;
 
     cout << "Keni zgjedhur telefon te brendit " << brand
-        << ", ku mund te shtoni edhe " << maxAdd << " telefona tjere.\n";
+         << ", ku mund te shtoni edhe " << maxAdd << " telefona tjere.\n";
 
     if (maxAdd > 0) {
         int add;
@@ -47,16 +47,17 @@ int main() {
         cin >> add;
 
         if (add >= 0 && add <= maxAdd) {
-            *stock += add;
+            *stockPtr += add;
         }
         else {
             cout << "Sasi e pavlefshme.\n";
         }
     }
+
     cout << "\nStoku aktual:\n";
-    cout << "Apple: " << apple << endl;
-    cout << "Samsung: " << samsung << endl;
-    cout << "Huawei: " << huawei << endl;
- 
+    cout << "Apple: " << appleQty << endl;
+    cout << "Samsung: " << samsungQty << endl;
+    cout << "Huawei: " << huaweiQty << endl;
+
     return 0;
 }
