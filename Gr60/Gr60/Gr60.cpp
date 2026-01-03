@@ -12,7 +12,7 @@ int main() {
 
     char choice;
 
-    RETRY:
+RETRY:
     cout << "Zgjidhni nje nga brendet e listuara A - Apple, S - Samsung, H - Huawei ";
     cin >> choice;
 
@@ -60,6 +60,16 @@ int main() {
     cout << "Apple: " << appleQty << endl;
     cout << "Samsung: " << samsungQty << endl;
     cout << "Huawei: " << huaweiQty << endl;
+
+    char vazhdo;
+    cout << "Deshironi te vazhdoni? shtypni P per Po, cfaredo karakteri per Jo\n";
+    cin >> vazhdo;
+    vazhdo = toupper(vazhdo);
+
+    if (vazhdo == 'P')
+    {
+        goto RETRY;
+    }
 
     return 0;
 }
