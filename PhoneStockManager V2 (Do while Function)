@@ -1,0 +1,74 @@
+#include <iostream>
+#include <cctype>
+
+using namespace std;
+
+int main() {
+
+    int apple = 1;
+    int samsung = 1;
+    int huawei = 2;
+
+    char choice;
+    char repeat;
+
+    do {
+        cout << "Zgjidhni nje nga brendet e listuara A - Apple, S - Samsung, H - Huawei: ";
+        cin >> choice;
+        choice = toupper(choice);
+
+        int* stock = nullptr;
+        string brand;
+        int valid = 1;
+
+        switch (choice) {
+        case 'A':
+            stock = &apple;
+            brand = "Apple";
+            break;
+        case 'S':
+            stock = &samsung;
+            brand = "Samsung";
+            break;
+        case 'H':
+            stock = &huawei;
+            brand = "Huawei";
+            break;
+        default:
+            cout << "Brend i panjohur\n";
+            valid = 0;
+        }
+
+        do {
+            int maxAdd = 25 - *stock;
+            int add;
+
+            cout << "Keni zgjedhur " << brand
+                 << ", mund te shtoni edhe " << maxAdd << " telefona.\n";
+            cout << "Shenoni sasine qe deshironi te shtoni: ";
+            cin >> add;
+
+            switch (add >= 0 && add <= maxAdd) {
+            case 1:
+                *stock += add;
+                valid = 0;
+                break;
+            case 0:
+                cout << "Sasi e pavlefshme.\n";
+            }
+
+        } while (valid == 1 && stock != nullptr);
+
+        cout << "\nStoku aktual:\n";
+        cout << "Apple: " << apple << endl;
+        cout << "Samsung: " << samsung << endl;
+        cout << "Huawei: " << huawei << endl;
+
+        cout << "\nDeshironi te vazhdoni? (Y/N): ";
+        cin >> repeat;
+        repeat = toupper(repeat);
+
+    } while (repeat == 'Y');
+
+    return 0;
+}
