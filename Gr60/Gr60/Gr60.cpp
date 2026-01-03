@@ -11,7 +11,9 @@ int main() {
     int huaweiQty = 2;
 
     char choice;
-    cout << "Zgjidhni nje nga brendet e listuara A - Apple, S - Samsung, H - Huawei? ";
+
+    RETRY:
+    cout << "Zgjidhni nje nga brendet e listuara A - Apple, S - Samsung, H - Huawei ";
     cin >> choice;
 
     choice = toupper(choice);
@@ -32,8 +34,8 @@ int main() {
         brand = "Huawei";
     }
     else {
-        cout << "Brend i panjohur\n";
-        return 0;
+        cout << "Brend i panjohur.\nProvoni perseri.\n\n";
+        goto RETRY;
     }
 
     int maxAdd = 25 - *stockPtr;
