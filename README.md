@@ -42,7 +42,7 @@ Programi i lejon përdoruesit që:
 ### Kufizime
 - Stoku maksimal për çdo brend: **25**
 - Vlerat negative ose ato që e tejkalojnë kufirin nuk pranohen
-
+ 
 ### Qëllimi i Projektit
 Ky projekt shërben si shembull praktik për:
 - Kuptimin e pointer-ave
